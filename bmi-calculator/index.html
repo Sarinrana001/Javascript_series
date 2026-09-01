@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BMI Calculator</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="page">
+    <section class="calculator-card">
+      <div class="intro">
+        <p class="eyebrow">HEALTH CHECK</p>
+        <h1>BMI Calculator</h1>
+        <p class="description">
+          Enter your height and weight to calculate your Body Mass Index.
+        </p>
+      </div>
+
+      <form>
+        <div class="input-group">
+          <label for="height">Height <span>(cm)</span></label>
+          <input
+            type="number"
+            id="height"
+            placeholder="Example: 170"
+            min="1"
+          >
+        </div>
+
+        <div class="input-group">
+          <label for="weight">Weight <span>(kg)</span></label>
+          <input
+            type="number"
+            id="weight"
+            placeholder="Example: 65"
+            min="1"
+          >
+        </div>
+
+        <button type="submit">Calculate BMI</button>
+      </form>
+
+      <div id="results" aria-live="polite"></div>
+
+      <div class="weight-guide">
+        <h2>BMI Weight Guide</h2>
+
+        <div class="guide-item underweight">
+          <span>Underweight</span>
+          <strong>Below 18.6</strong>
+        </div>
+
+        <div class="guide-item normal">
+          <span>Normal range</span>
+          <strong>18.6 – 24.9</strong>
+        </div>
+
+        <div class="guide-item overweight">
+          <span>Overweight</span>
+          <strong>Above 24.9</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

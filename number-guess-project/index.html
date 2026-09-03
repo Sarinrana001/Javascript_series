@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Number Guessing Game</title>
+
+  <!-- Your neon CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="game-page">
+    <section id="wrapper" aria-labelledby="gameTitle">
+      <p class="game-tag">✦ MIND CHALLENGE</p>
+
+      <h1 id="gameTitle">Guess The Number</h1>
+
+      <p class="game-description">
+        A secret number from <strong>1 to 100</strong> is waiting.
+      </p>
+
+      <p class="game-description">
+        You have <strong>10 attempts</strong>. Make every guess count.
+      </p>
+
+      <form class="form">
+        <label for="guessField" id="guess">Enter your guess</label>
+
+        <input
+          type="number"
+          id="guessField"
+          class="guessField"
+          min="1"
+          max="100"
+          placeholder="Example: 42"
+          autocomplete="off"
+          required
+        >
+
+        <input
+          type="submit"
+          id="subt"
+          value="CHECK MY GUESS →"
+          class="guessSubmit"
+        >
+      </form>
+
+      <div class="resultParas" aria-live="polite">
+        <p>
+          <span>Previous guesses</span>
+          <span class="guesses"></span>
+        </p>
+
+        <p>
+          <span>Attempts remaining</span>
+          <span class="lastResult">10</span>
+        </p>
+
+        <p class="lowOrHi">
+          Enter a number to start the challenge.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
